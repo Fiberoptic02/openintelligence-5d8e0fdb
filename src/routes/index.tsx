@@ -30,8 +30,8 @@ export const Route = createFileRoute("/")({
   component: Portfolio,
 });
 
-const NAME = "Your Name"; // ← replace with your real name in this file
-const INITIALS = "YN";
+const NAME = "n8n";
+const INITIALS = "n8";
 
 const services = [
   {
