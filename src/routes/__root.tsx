@@ -83,6 +83,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Control systems engineer turned data & AI automation specialist. Building intelligent pipelines that turn operational data into business intelligence." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Portfolio — AI Automation & Business Intelligence Engineer" },
+      { name: "twitter:description", content: "Control systems engineer turned data & AI automation specialist. Building intelligent pipelines that turn operational data into business intelligence." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/daa4ccd4-a48a-41e4-a19c-6265e6206699/id-preview-d9b85037--eb74e946-72de-4cdb-9940-bb234dcbc098.lovable.app-1781790023710.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/daa4ccd4-a48a-41e4-a19c-6265e6206699/id-preview-d9b85037--eb74e946-72de-4cdb-9940-bb234dcbc098.lovable.app-1781790023710.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
