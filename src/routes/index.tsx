@@ -15,6 +15,7 @@ import {
   Sparkles,
   Quote,
 } from "lucide-react";
+import jomarPhoto from "@/assets/jomar.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -216,35 +217,51 @@ function Hero() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 grid-bg" aria-hidden />
       <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-20 md:pt-32">
-        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-2 px-3 py-1.5 text-xs text-muted-foreground">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-          </span>
-          Available for new automation projects
-        </div>
+        <div className="grid items-center gap-12 lg:grid-cols-[1.4fr_1fr]">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-2 px-3 py-1.5 text-xs text-muted-foreground">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+              </span>
+              Available for new automation projects
+            </div>
 
-        <h1 className="mt-6 max-w-4xl font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
-          Turning operational data into <span className="text-gradient">business intelligence</span>.
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-          8+ years engineering industrial control systems — now building AI-powered
-          data pipelines, dashboards, and automation workflows that move the needle.
-        </p>
+            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+              Turning operational data into <span className="text-gradient">business intelligence</span>.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+              8+ years engineering industrial control systems — now building AI-powered
+              data pipelines, dashboards, and automation workflows that move the needle.
+            </p>
 
-        <div className="mt-10 flex flex-wrap items-center gap-3">
-          <a
-            href="#work"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all hover:shadow-[var(--shadow-glow)]"
-          >
-            View selected work <ArrowUpRight className="h-4 w-4" />
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/50"
-          >
-            Start a project
-          </a>
+            <div className="mt-10 flex flex-wrap items-center gap-3">
+              <a
+                href="#work"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all hover:shadow-[var(--shadow-glow)]"
+              >
+                View selected work <ArrowUpRight className="h-4 w-4" />
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/50"
+              >
+                Start a project
+              </a>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/30 via-accent/20 to-transparent blur-2xl" aria-hidden />
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-surface-2 shadow-[var(--shadow-glow)]">
+              <img
+                src={jomarPhoto.url}
+                alt={`Portrait of ${NAME}`}
+                className="aspect-[4/5] w-full object-cover"
+                loading="eager"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="mt-16 grid grid-cols-2 gap-6 border-t border-border pt-8 md:grid-cols-4">
