@@ -219,8 +219,9 @@ function Hero() {
               Available for new automation projects
             </div>
 
-            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-              Turning operational data into <span className="text-gradient">business intelligence</span>.
+            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.02] tracking-tight md:text-6xl lg:text-7xl">
+              <span className="block text-foreground">Rank Smarter.</span>
+              <span className="block text-gradient">Automate Everything.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
               8+ years engineering industrial control systems — now building AI-powered
