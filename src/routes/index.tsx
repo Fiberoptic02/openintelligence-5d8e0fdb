@@ -301,10 +301,10 @@ function Services() {
         {services.map((s) => (
           <div
             key={s.title}
-            className="group relative overflow-hidden rounded-xl border border-border bg-surface p-6 transition-all hover:border-primary/40 hover:bg-surface-2"
+            className="group relative overflow-hidden rounded-2xl border border-border bg-surface/60 p-6 backdrop-blur-sm transition-all hover:border-primary/60 hover:bg-surface-2 hover:shadow-[0_0_40px_-10px_var(--primary)]"
           >
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary ring-1 ring-primary/20">
-              <s.icon className="h-5 w-5" />
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/30 shadow-[0_0_30px_-6px_var(--primary)]">
+              <s.icon className="h-6 w-6" />
             </div>
             <h3 className="mt-5 font-display text-lg font-semibold">{s.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
