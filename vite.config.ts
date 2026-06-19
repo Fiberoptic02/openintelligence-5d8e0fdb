@@ -6,10 +6,19 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// When deploying to Render (or any plain Node host), build a Node SSR server
+// instead of the default Cloudflare Workers bundle. Render sets RENDER=true
+// in its build env; you can also opt in locally with NITRO_PRESET=node-server.
+const useNodeServerBuild =
+  !!process.env.RENDER || process.env.NITRO_PRESET === "node-server";
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  ...(useNodeServerBuild
+    ? { nitro: { preset: "node-server" as const } }
+    : {}),
 });
