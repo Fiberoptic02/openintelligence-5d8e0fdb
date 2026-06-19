@@ -1,0 +1,13 @@
+# Render deployment config for this TanStack Start app.
+# Render auto-sets RENDER=true during builds; vite.config.ts detects it
+# and switches the Nitro preset to node-server so SSR runs on a Node host.
+services:
+  - type: web
+    name: jomar-portfolio
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
